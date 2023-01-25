@@ -45,7 +45,7 @@ p {
 /* ナビゲーション */
 .Nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     max-width: 960px;
     margin: 20px auto;
@@ -55,7 +55,6 @@ p {
 .Nav-list {
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
 }
 .Nav-list li {
     border-left: solid 1px #000;
@@ -68,20 +67,16 @@ p {
 
 @media screen and (max-width:767px){
     .Nav {
-        flex-direction: column;
-        align-items: flex-start;
+        display: block;
         margin: 20px 0;
     }
     .Nav-list {
-        flex-wrap: wrap;
+        display: block;
     }
     .Nav-list li {
         border-left: none;
         border-bottom: solid 1px #000;
         width: 100%;
         padding: 20px 0 10px;
-    }
-    .Nav-list li:nth-child(1) {
-        border-left: none;
     }
 }
