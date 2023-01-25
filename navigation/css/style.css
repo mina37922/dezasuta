@@ -1,0 +1,87 @@
+@charset "utf-8";
+/* cssリセット */
+html,
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    /*デフォルトの文字色、font-familyを予め当てておく*/
+    color: #000;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+        "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
+}
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+p {
+    margin: 30px 0;
+    text-align: center;
+}
+
+/* ナビゲーション */
+.Nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.Nav-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.Nav-list li {
+    border-left: solid 1px #000;
+    padding: 10px 20px;
+}
+.Nav-list li:nth-child(1) {
+    border-left: none;
+}
+
+
+@media screen and (max-width:767px){
+    .Nav {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 20px 0;
+    }
+    .Nav-list {
+        flex-wrap: wrap;
+    }
+    .Nav-list li {
+        border-left: none;
+        border-bottom: solid 1px #000;
+        width: 100%;
+        padding: 20px 0 10px;
+    }
+    .Nav-list li:nth-child(1) {
+        border-left: none;
+    }
+}
