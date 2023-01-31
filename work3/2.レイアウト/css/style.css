@@ -37,6 +37,7 @@ body {
 	display: block;
     height: 100%;
 	font-size: 1.6rem;
+	background-color: #eeeeee;
 }
 a {
     text-decoration: none;
@@ -59,7 +60,6 @@ img {
 ================================*/
 .wrap {
     max-width: 960px;
-    background-color: #eeeeee;
     margin: 0 auto;
     padding: 50px 0;
 }
@@ -75,11 +75,8 @@ img {
     justify-content: space-between;
     gap: 24px;
     margin: 0 auto;
-    padding-left: clamp(20px, 2vw, 40px);
-    padding-right: clamp(20px, 2vw, 40px);
 }
 .contents .item {
-    width: calc(100%/3);
     background-color: #FFF;
 }
 .contents .item img {
@@ -103,8 +100,6 @@ img {
 @media screen and (max-width: 400px) {
     .contents {
         flex-direction: column;
-    }
-    .contents .item {
-        width: 100%;
+		padding: 0 20px;
     }
 }

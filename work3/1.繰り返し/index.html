@@ -7,19 +7,21 @@
     <title>繰り返し構文で1~10までの数字を足してみよう</title>
 </head>
 <body>
-
-    <script>
-
-        for (var i = 0; i < 10; i++) {
-            //繰り返す処理
-            if (i < 10) {
-            console.log('20以上');
-        } else {
-            console.log('20未満');
-        }
-        }
-
-    </script>
+        <script>
+            //足し算していく変数を宣言
+            let total = 0;
+            for (var i = 1; i <= 10; i++) {
+                //ループでiの値を足していく iはループで1~10まで変化する
+                total = total + i;
+            }
     
+            //足した値が20以上か確認する
+            if (20 <= total) {
+                console.log('20以上');
+            } else {
+                console.log('20未満');
+            }
+    
+        </script>
 </body>
 </html>
