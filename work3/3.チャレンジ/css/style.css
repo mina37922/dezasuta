@@ -437,6 +437,7 @@ li.menu-list:hover ul.menu-list-second {
         z-index: -1;
         opacity: 0;
         top:0;
+        left: 0;
         width:100%;
         height: 100vh;
         background-color: rgba(255,255,255,.9);
@@ -447,18 +448,26 @@ li.menu-list:hover ul.menu-list-second {
         z-index:999;
     }
 
-    /*ナビゲーション*/
-    #G-nav-sp ul {
+    /* ナビゲーション */
+    /* #G-nav-sp ul {
         display: none;
         position: absolute;
         z-index: 999;
         top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translateY(-50%);
+        width: 100%;
+    } */
+    #G-nav-sp ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
     }
-    #G-nav-sp.panelactive ul {
+
+    /* ナビゲーション閉じるだけのアクション */
+    /* #G-nav-sp.panelactive ul {
         display: block;
-    }
+    } */
     #G-nav-sp li{
         list-style: none;
         text-align: center; 
