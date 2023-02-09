@@ -95,9 +95,47 @@ img {
 }
 
 /* スライドショー */
-.slider img {
-    width: 100%;
+.mainVisual-slider {
+    position: relative;
+    z-index: 3;
+    height: 33.85vw;
 }
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+.slider01 {
+    background:url("../images/pc-mainVisual01.jpg");
+}
+.slider02 {
+    background:url("../images/pc-mainVisual02.jpg");
+}
+.slider-item {
+    width: 100%;
+    height: 33.85vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.slick-dots {
+    position: static;
+    margin: -50px 0 0 0;
+}
+.slick-dots li {
+    margin: 0 9.5px;
+}
+.slick-dots li button {
+    color: transparent;
+    outline: none;
+    width: 14.6px;
+    height: 14.6px;
+    display: block;
+    border-radius: 50%;
+    background: #fff;
+}
+.slick-dots .slick-active button{
+    opacity: .5;
+}
+
 
 /*===============================
 	main
@@ -145,6 +183,7 @@ main {
     margin-bottom: 95.6px;
 }
 .about .img {
+    width: 50%;
     border-bottom-right-radius: 82.3px;
 }
 .about .contents {
@@ -182,16 +221,16 @@ main {
 .menu .menu-content-box .img {
     border-top-right-radius: 41.6px;
 }
-.menu .menu-content-box .sub-title {
-    position: absolute;
-    top: 187px;
-    left: 12px;
+.menu .menu-content-box h3 {
+    margin-top: -13px;
+    margin-left: .4vw;
     padding-bottom: 9.2px;
     color: #d30202;
     font-size: 38px;
+    font-weight: normal;
 }
 .menu .menu-content-box .text {
-    margin-top: 38.3px;
+    margin-top: 10.3px;
     font-size: 17px;
     line-height: 1.47;
 }
@@ -205,12 +244,37 @@ main {
     padding-bottom: 16.6px;
 }
 
-.gallery-wrap {
-    display: flex;
-    max-width: calc(100%/5);
-    height: auto
+.gallery-wrap img {
+    width: 100%;
+    height: auto;
 }
-
+.slick-prev, 
+.slick-next {
+    position: absolute;
+    top: 42%;
+    cursor: pointer;
+    outline: none;
+    border-top: 5px solid #FFF;
+    border-right: 5px solid #FFF;
+    height: 15px;
+    width: 15px;
+}
+.slick-prev {
+    left: 15%;
+    transform: rotate(-135deg);
+    z-index: 333;
+}
+.slick-next {
+    right: 15%;
+    transform: rotate(45deg);
+    z-index: 333;
+}
+.slick-prev:before {
+    content: '';
+}
+.slick-next:before {
+    content: '';
+}
 
 /* EVENT */
 .event {
@@ -223,7 +287,6 @@ main {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    height: 200px;
     background-color: #FFF;
     border: solid #4f260b 3.68px;
     padding: 3% 16%;
@@ -267,7 +330,6 @@ footer {
     justify-content: flex-start;
     align-items: flex-start;
     gap: 64.8px;
-    width: 1000px;
     margin: 0 auto;
     background-color: #FFF;
     padding-bottom: 73.8px;
@@ -298,4 +360,5 @@ footer small {
     bottom: 2%;
     right: 2%;
     cursor: pointer;
+    z-index: 888;
 }

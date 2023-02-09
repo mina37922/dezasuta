@@ -7,6 +7,8 @@
     <title>カフェのサイト</title>
     <meta name="description" content="カフェのサイトです">
 
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/style.css">
     
 </head>
@@ -26,22 +28,14 @@
                 </ul>
             </nav>
         </div>
-        <div class="slider">
-            <p><img src="images/pc-mainVisual01.jpg" alt="Design cafe 様子"></p>
-        </div>
 
-        <!-- <div class="carousel-slider-wrap">
-            <div class="slide-wrap-main">
-                <div class="slide"><img src="images/pc-mainVisual01.jpg" alt=""></div>
-            </div>
-            <div class="slide-wrap-sub">
-                <div class="slide"><img src="images/pc-mainVisual01.jpg" alt=""></div>
-                <div class="slide"><img src="images/pc-mainVisual02.jpg" alt=""></div>
-            </div>
-        </div> -->
-        <!-- /carousel-slider-wrap -->
+        <ul class="mainVisual-slider">
+            <li class="slider-item slider01"></li>
+            <li class="slider-item slider02"></li>
+            <li class="slider-item slider01"></li>
+        </ul><!-- /mainVisual-slider -->
+
     </header>
-
 
     <main>
         <section class="summary">
@@ -75,7 +69,7 @@
                 <div class="menu-content-box">
                     <img class="img" src="images/menu-drink.jpg" alt="ドリンク">
                     <div class="item">
-                        <p class="sub-title">Drink</p>
+                        <h3>Drink</h3>
                         <p class="text">ドリンクメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
                     </div>
                 </div>
@@ -83,7 +77,7 @@
                 <div class="menu-content-box">
                     <img class="img" src="images/menu-food.jpg" alt="フード">
                     <div class="item">
-                        <p class="sub-title">Food</p>
+                        <h3>Food</h3>
                         <p class="text">フードメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
                     </div>
                 </div>
@@ -91,7 +85,7 @@
                 <div class="menu-content-box">
                     <img class="img" src="images/menu-sweets.jpg" alt="スイーツ">
                     <div class="item">
-                        <p class="sub-title">Sweets</p>
+                        <h3>Sweets</h3>
                         <p class="text">スイーツメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
                     </div>
                 </div>
@@ -102,13 +96,14 @@
         <section id="gallery" class="gallery">
             <h2 class="title"><img src="images/ttl-gallery.svg" alt="GALLERY"></h2>
 
-            <div class="gallery-wrap">
-                <img src="images/gallary-01.jpg" alt="">
-                <img src="images/gallary-02.jpg" alt="">
-                <img src="images/gallary-03.jpg" alt="">
-                <img src="images/gallary-04.jpg" alt="">
-                <img src="images/gallary-05.jpg" alt="">
-            </div>
+            <ul class="gallery-wrap">
+                <li><img src="images/gallary-01.jpg" alt=""></li>
+                <li><img src="images/gallary-02.jpg" alt=""></li>
+                <li><img src="images/gallary-03.jpg" alt=""></li>
+                <li><img src="images/gallary-04.jpg" alt=""></li>
+                <li><img src="images/gallary-05.jpg" alt=""></li>
+                <li><img src="images/gallary-01.jpg" alt=""></li>
+                </ul><!-- /slider -->
         </section><!-- /gallery -->
 
 
@@ -134,7 +129,7 @@
 
 
     <footer>
-        <div class="footer-wrap">
+        <div class="footer-wrap wrap">
             <img src="images/footer-logo.png" alt="DESIGN CAFE">
             
             <div class="info">
@@ -153,6 +148,7 @@
     </div>
 
     <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/slick.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
