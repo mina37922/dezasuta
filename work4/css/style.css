@@ -354,6 +354,7 @@ footer small {
 
 /* ページトップへ戻る */
 #js-pageTop {
+    display: none;
     position: fixed;
     width: 125px;
     height: 125px;
