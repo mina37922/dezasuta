@@ -13,9 +13,9 @@
     
 </head>
 
-<body>
+<body id="pageTop">
 
-    <header id="pageTop">
+    <header class="header js-header">
         <div class="header-wrap">
             <h1 class="logo"><img src="images/header-logo.png" alt="カフェのサイトロゴ"></h1>
             <nav class="pc-nav">
@@ -40,15 +40,15 @@
             </nav>
         </div>
 
-        <ul class="mainVisual-slider">
-            <li class="slider-item slider01"></li>
-            <li class="slider-item slider02"></li>
-            <li class="slider-item slider01"></li>
-        </ul><!-- /mainVisual-slider -->
-
     </header>
+    <ul class="mainVisual-slider">
+        <li class="slider-item slider01"></li>
+        <li class="slider-item slider02"></li>
+        <li class="slider-item slider01"></li>
+    </ul><!-- /mainVisual-slider -->
 
-    <main>
+
+    <main id="main">
         <section class="summary">
             <p class="head">Have a happy day From a cup of coffee.</p>
 
@@ -61,7 +61,7 @@
 
 
         <section id="about" class="about wrap">
-            <h2 class="title">
+            <h2 class="title anchor">
                 <img class="sp-only" src="images/ttl-about.svg" alt="ABOUT US">
             </h2>
             <picture>
@@ -83,7 +83,7 @@
 
 
         <section id="menu" class="menu wrap">
-            <h2 class="title">
+            <h2 class="title anchor">
                 <img src="images/ttl-menu.svg" alt="MENU">
             </h2>
 
@@ -116,7 +116,9 @@
 
 
         <section id="gallery" class="gallery">
-            <h2 class="title"><img src="images/ttl-gallery.svg" alt="GALLERY"></h2>
+            <h2 class="title anchor">
+                <img src="images/ttl-gallery.svg" alt="GALLERY">
+            </h2>
 
             <ul class="gallery-wrap">
                 <li><img src="images/gallary-01.jpg" alt=""></li>
@@ -130,7 +132,9 @@
 
 
         <section id="event" class="event wrap">
-            <h2 class="title"><img src="images/ttl-event.svg" alt="EVENT"></h2>
+            <h2 class="title anchor">
+                <img src="images/ttl-event.svg" alt="EVENT">
+            </h2>
 
             <dl class="event-news">
                 <dt>2020.06.23</dt>
@@ -173,6 +177,6 @@
     <script src="js/jquery-3.6.3.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.2/picturefill.js"></script>
+
 </body>
 </html>

@@ -156,6 +156,19 @@ img {
 }
 
 @media screen and (max-width:1100px) {
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+    }
+    .header.change-color {
+        background: #4f260b;
+        height: 53px;
+        transition: 0.3s;
+    }
+
     .header-wrap .logo {
         width: 187.5px;
     }
@@ -276,6 +289,10 @@ main {
 .title {
     text-align: center;
 }
+.anchor{
+    padding-top:53px;
+    margin-top:-53px;
+}
 
 .summary {
     margin: 0 auto;
@@ -283,18 +300,18 @@ main {
 	text-align: center;
 }
 .summary h2 {
-    padding-bottom: clamp(22.6px, 1.41vw, 27.2px);
-    font-size: clamp(3.8rem, 4.2vw, 8.2rem);
+    padding-bottom: clamp(22.6px, 2.72vw, 27.2px);
+    font-size: clamp(3.8rem, 8.2vw, 8.2rem);
     line-height: 1.17;
     letter-spacing: 0.1em;
     font-weight: normal;
 }
 .summary .head {
-    padding-bottom: clamp(22.6px, 2.4vw, 47px);
-    font-size: clamp(1.7rem, 1.56vw, 3rem);
+    padding-bottom: clamp(22.6px, 4.7vw, 47px);
+    font-size: clamp(1.7rem, 3vw, 3rem);
 }
 .summary .text {
-    font-size: clamp(1.6rem, 1.19vw, 2.3rem);
+    font-size: clamp(1.6rem, 2.3vw, 2.3rem);
     line-height: 1.65;
     letter-spacing: 0.1em;
 }
@@ -305,7 +322,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: clamp(42.4px, 4.9vw, 95.6px);
+    margin-bottom: clamp(42.4px, 9.56vw, 95.6px);
 }
 .about .contents {
     width: 50%;
@@ -316,9 +333,9 @@ main {
     border-bottom-right-radius: 82.3px;
 }
 .about .head {
-    padding-top: clamp(35.1px, 2.9vw, 56px);
-    padding-bottom: clamp(21.49px, 2.5vw, 32px);
-    font-size: clamp(3.6rem, 2.2vw, 4.4rem);
+    padding-top: clamp(35.1px, 5.6vw, 56px);
+    padding-bottom: clamp(21.49px, 3.2vw, 32px);
+    font-size: clamp(3.6rem, 4.4vw, 4.4rem);
     line-height: 1.38;
 }
 .about .text {
@@ -328,7 +345,7 @@ main {
 
 /* MENU */
 .menu .title {
-    padding-bottom: clamp(17.1px, 2vw, 38.7px);
+    padding-bottom: clamp(17.1px, 3.87vw, 38.7px);
 }
 .menu .menu-contents {
     display: flex;
@@ -352,7 +369,7 @@ main {
     font-weight: normal;
 }
 .menu .menu-content-box .text {
-    margin-top: clamp(16.7px, 1vw, 19.5px);
+    margin-top: clamp(16.7px, 1.95vw, 19.5px);
     font-size: 17px;
     line-height: 1.47;
 }
@@ -360,10 +377,10 @@ main {
 
 /* GALLERY */
 .gallery {
-    margin-bottom: clamp(27px, 3vw, 59.3px);
+    margin-bottom: clamp(27px, 5.93vw, 59.3px);
 }
 .gallery h2 {
-    padding-bottom: clamp(15.5px, .8vw, 16.6px);
+    padding-bottom: clamp(15.5px, 1.66vw, 16.6px);
 }
 .gallery-wrap img {
     width: 100%;
@@ -400,10 +417,10 @@ main {
 
 /* EVENT */
 .event {
-    margin-bottom: clamp(27px, 3.5vw, 68.2px);
+    margin-bottom: clamp(27px, 6.82vw, 68.2px);
 }
 .event .title {
-    padding-bottom: clamp(15.5px, 1.5vw, 30.5px);
+    padding-bottom: clamp(15.5px, 3.05vw, 30.5px);
 }
 .event .event-news {
     display: flex;
@@ -419,12 +436,12 @@ main {
 }
 .event-news dt {
     width: 20%;
-    font-size: clamp(1.6rem, 1.1vw, 2.3rem);
+    font-size: clamp(1.6rem, 2.3vw, 2.3rem);
     line-height: 1.95;
 }
 .event-news dd {
     width: 80%;
-    font-size: clamp(1.6rem, 1.1vw, 2.3rem);
+    font-size: clamp(1.6rem, 2.3vw, 2.3rem);
     line-height: 1.95;
     text-decoration:underline;
     overflow: hidden;
@@ -435,7 +452,7 @@ main {
 
 /* ACCESS */
 .access .title {
-    padding-bottom: clamp(15.5px, 1.9vw, 37.2px);
+    padding-bottom: clamp(15.5px, 3.72vw, 37.2px);
 }
 .access iframe {
     width: 100%;
@@ -556,8 +573,8 @@ main {
 ================================*/
 footer {
     background-color: #FFF;
-    padding-top: clamp(40.9px, 3.8vw, 74.6px);
-    padding-bottom: clamp(29px, 3.8vw, 74.6px);
+    padding-top: clamp(40.9px, 7.46vw, 74.6px);
+    padding-bottom: clamp(29px, 7.46vw, 74.6px);
 }
 .footer-wrap {
     display: flex;
@@ -566,8 +583,8 @@ footer {
     gap: 64.8px;
     margin: 0 auto;
     background-color: #FFF;
-    padding-bottom: clamp(40.3px, 3.8vw, 73.8px);
-    font-size: clamp(18px, 1vw, 20px);
+    padding-bottom: clamp(40.3px, 7.38vw, 73.8px);
+    font-size: clamp(18px, 2vw, 20px);
     line-height: 1.95;
 }
 .footer-wrap .time {

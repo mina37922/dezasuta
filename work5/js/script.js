@@ -1,3 +1,5 @@
+
+// ページトップ
 $(function () {
     var pagetop = $('#js-pageTop');
     $(window).scroll(function () {
@@ -9,6 +11,7 @@ $(function () {
     });
     
   });
+
 
 // メインビジュアル
   $('.mainVisual-slider').slick({
@@ -51,5 +54,23 @@ $(function(){
       $('.sp-nav').fadeToggle();
       $('.hamburger').toggleClass('open');
   });
-  
+  $('.sp-nav ul li a').on('click', function() {
+    $('.hamburger').click();
+    return true;
+    });
+
 });
+
+
+
+// スクロールで固定
+$(function () {
+  $(window).on('scroll', function () {
+    if ($('.mainVisual-slider').height()  < $(this).scrollTop()) {
+        $('.header').addClass('change-color');
+    } else {
+        $('.header').removeClass('change-color');
+    }
+  });
+});
+
