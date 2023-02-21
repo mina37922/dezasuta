@@ -40,7 +40,7 @@ body {
 	display: block;
 	font-size: 1.6rem;
     background-color: #FFF;
-    overflow: hidden;
+	overflow: hidden
 }
 a {
     text-decoration: none;
@@ -75,6 +75,18 @@ img {
 /*===============================
 	header
 ================================*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+.header.change-color {
+    background: #4f260b;
+    height: 74px;
+    transition: 0.3s;
+}
 .header-wrap {
     position: absolute;
     top: 0;
@@ -156,19 +168,11 @@ img {
 }
 
 @media screen and (max-width:1100px) {
-    .header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 999;
-    }
     .header.change-color {
         background: #4f260b;
         height: 53px;
         transition: 0.3s;
     }
-
     .header-wrap .logo {
         width: 187.5px;
     }
