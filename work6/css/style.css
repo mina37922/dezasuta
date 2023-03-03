@@ -429,10 +429,6 @@ main {
   .about {
     display: block;
   }
-  .about .wrap {
-    max-width: 100%;
-    padding: 0;
-  }
   .about .contents {
     width: 100%;
     padding-left: 0;
@@ -450,6 +446,11 @@ main {
   }
   .about .head {
     line-height: 1.25;
+  }
+  .about.wrap {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
   }
   /* MENU */
   .menu {

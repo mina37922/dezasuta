@@ -464,14 +464,10 @@ main {
     }
     
 
+
     /* ABOUT US */
     .about {
         display: block;
-
-        .wrap {
-            max-width: 100%;
-            padding: 0;
-        }
 
         .contents {
             width: 100%;
@@ -496,7 +492,11 @@ main {
             line-height: 1.25;
         }
     }
-
+    .about.wrap {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
 
 
     /* MENU */
