@@ -1153,3 +1153,12 @@ h1 {
   .time {
       text-align: right;
   }
+
+
+@media screen and (min-width:600px){
+    // svgアニメーション
+    h1 {
+        padding-top: 10%;
+        padding-left: 0;
+    }
+}

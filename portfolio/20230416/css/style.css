@@ -917,4 +917,11 @@ hr {
 
 .time {
   text-align: right;
+}
+
+@media screen and (min-width: 600px) {
+  h1 {
+    padding-top: 10%;
+    padding-left: 0;
+  }
 }/*# sourceMappingURL=style.css.map */
