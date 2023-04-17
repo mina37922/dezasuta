@@ -1,0 +1,565 @@
+@charset "UTF-8";
+/*===============================
+	全体
+================================*/
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  min-height: 0vw;
+}
+
+/* リセット */
+html,
+body,
+header,
+footer,
+main,
+section,
+h1,
+h2,
+h3,
+ul,
+li,
+p,
+dl,
+dt,
+dd {
+  margin: 0;
+  padding: 0;
+  line-height: 1.8;
+  font-family: "ten-mincho-text", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FFF;
+}
+
+html {
+  height: 100vh;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: block;
+  height: 100%;
+  font-size: 1.6rem;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s;
+  cursor: pointer;
+}
+a:hover {
+  opacity: 0.5;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+  border: none;
+}
+
+/* デバイス表示・非表示 */
+.pc-only {
+  display: none;
+}
+
+/* 背景色 */
+.bg-color1 {
+  background: #7500DB;
+}
+.bg-color1 .font-color1 {
+  color: #7500DB;
+}
+
+.bg-color2 {
+  background: #0E006B;
+}
+.bg-color2 .font-color2 {
+  color: #0E006B;
+}
+
+.bg-color3 {
+  background: #242424;
+}
+.bg-color3 .font-color3 {
+  color: #242424;
+}
+
+/* 星キラキラ */
+.stars {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.star {
+  position: absolute;
+  display: block;
+  background-color: #FFF;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  animation: twinkle 5s infinite;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+@media screen and (min-width: 600px) {
+  html {
+    font-size: 70%;
+  }
+  /* デバイス表示・非表示 */
+  .pc-only {
+    display: inherit;
+  }
+  .sp-only {
+    display: none;
+  }
+}
+/*===============================
+	header
+================================*/
+header {
+  position: fixed;
+  width: 50px;
+  height: 100vh;
+  background-color: #FFF;
+  z-index: 999;
+}
+header .pc-nav {
+  display: none;
+}
+
+/*　spナビゲーション　*/
+.globalMenuPc {
+  display: none;
+}
+
+.hamburger {
+  display: block;
+  position: fixed;
+  width: 50px;
+  height: 100vh;
+  color: #2C1F46;
+  background-color: #FFF;
+  text-align: center;
+  writing-mode: vertical-rl;
+  letter-spacing: 0.5em;
+  z-index: 3;
+}
+.hamburger .menu {
+  display: flex;
+  justify-content: center;
+}
+.hamburger p {
+  color: #2C1F46;
+}
+
+/* スマホメニューを開いてる時のボタン */
+.hamburger.active {
+  right: 0;
+}
+
+/* メニュー背景　*/
+nav.globalMenuSp {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  color: #2C1F46;
+  background: #FFF;
+  width: 100%;
+  height: 100vh;
+  padding-left: 20px;
+  transform: translateX(-100%);
+  transition: all 0.6s;
+}
+nav.globalMenuSp ul {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+nav.globalMenuSp ul li {
+  width: 100%;
+  transition: 0.4s all;
+}
+nav.globalMenuSp ul a {
+  color: #2C1F46;
+}
+
+nav.globalMenuSp ul li a {
+  display: block;
+  padding: 20px 0 20px 20px;
+  text-decoration: none;
+}
+
+nav.globalMenuSp li .menu {
+  position: relative;
+  font-size: 4rem;
+}
+nav.globalMenuSp li .menu::before {
+  position: absolute;
+  bottom: 6px;
+  font-size: 1.5rem;
+}
+
+nav.globalMenuSp li .menu1::before {
+  content: "サービス";
+}
+
+nav.globalMenuSp li .menu2::before {
+  content: "制作実績";
+}
+
+nav.globalMenuSp li .menu3::before {
+  content: "自己紹介";
+}
+
+nav.globalMenuSp li .menu4::before {
+  content: "お問い合わせ";
+}
+
+/* クリックでjQueryで追加・削除 */
+nav.globalMenuSp.active {
+  opacity: 100;
+  display: block;
+  transform: translateX(0%);
+}
+
+@media screen and (min-width: 960px) {
+  header {
+    width: 80px;
+  }
+  header .hamburger, header .globalMenuSp {
+    display: none;
+  }
+  header .globalMenuPc {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  header .globalMenuPc p, header .globalMenuPc li {
+    color: #2C1F46;
+    writing-mode: vertical-rl;
+  }
+  header .globalMenuPc p {
+    padding: 60px 0 80px;
+  }
+  header .globalMenuPc li {
+    padding: 20px 0;
+  }
+}
+/*===============================
+    main
+================================*/
+/* main(全体) */
+.main {
+  width: 100vw;
+  height: auto;
+}
+
+/* セクションメニュー */
+.section-menu {
+  background-color: #FFF;
+  margin-bottom: 40px;
+  border: solid 1px #2C1F46;
+}
+.section-menu .section-box {
+  padding: 40px 10px 40px 20px;
+}
+.section-menu h2, .section-menu h3, .section-menu li {
+  color: #242424;
+}
+.section-menu .title {
+  position: relative;
+  font-size: 4rem;
+  padding-bottom: 40px;
+}
+.section-menu .title::before {
+  content: attr(data-number);
+  display: block;
+  color: #2C1F46;
+  font-size: 1.8rem;
+}
+.section-menu .title::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 1px;
+  background-color: #2C1F46;
+}
+.section-menu .sub-title {
+  padding-bottom: 20px;
+  font-size: 1.8rem;
+}
+.section-menu li, .section-menu p {
+  font-size: 1.4rem;
+  color: #2C1F46;
+  line-height: 2;
+}
+
+@media screen and (min-width: 600px) {
+  .slide {
+    width: 100vw;
+    height: 100vh;
+  }
+  /* セクションメニュー */
+  .section-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 10%;
+    margin-bottom: 0;
+  }
+  .arrow {
+    width: auto;
+    margin-right: 20px;
+    margin-bottom: clamp(40px, 4.79vw, 80px);
+    padding: 5%;
+    color: #fff;
+    font-size: 2.4rem;
+    -webkit-clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+  }
+  .arrow a {
+    font-size: 1.8rem;
+  }
+  .section-area .content {
+    width: 50%;
+  }
+}
+/*===============================
+    footer
+================================*/
+footer {
+  background-color: #FFF;
+}
+footer p {
+  padding: 8px 20px 8px 0;
+  text-align: right;
+  color: #2C1F46;
+}
+
+@media screen and (min-width: 600px) {
+  footer {
+    position: absolute;
+    right: 0;
+    bottom: -80px;
+    width: 100%;
+  }
+}
+/*===============================
+    下層-works単品
+================================*/
+.works-wrap .works {
+  margin: 0 auto;
+}
+.works-wrap .section-menu {
+  display: none;
+}
+.works-wrap .works-container {
+  margin: 0 20px 20px 70px;
+}
+.works-wrap .introduction {
+  text-align: center;
+}
+.works-wrap .introduction .detail {
+  padding: 30px 20px;
+  background-color: #FFF;
+  text-align: left;
+}
+.works-wrap .introduction .detail h2, .works-wrap .introduction .detail p, .works-wrap .introduction .detail dt, .works-wrap .introduction .detail dd {
+  color: #2C1F46;
+}
+.works-wrap .introduction .detail dl {
+  margin: 30px 0;
+}
+.works-wrap .introduction .detail dt {
+  font-size: 1.5rem;
+}
+.works-wrap .introduction .detail dd {
+  margin-bottom: 10px;
+  padding-left: 10px;
+  font-size: 1.5rem;
+  border-bottom: solid 1px #2C1F46;
+}
+.works-wrap .introduction .secondary {
+  height: 400px;
+  padding: 20px;
+  background-color: #FFF;
+  overflow: scroll;
+}
+.works-wrap .group {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+.works-wrap .group .item {
+  width: 100%;
+  height: 140px;
+  background-color: #FFF;
+}
+.works-wrap .information {
+  margin-bottom: 80px;
+}
+.works-wrap .information .btn-wrap {
+  display: flex;
+  /*テスト表示用*/
+  max-width: 435px;
+  margin: 0 auto 20px;
+  justify-content: space-between;
+}
+.works-wrap .information a.works-btn {
+  width: 49.5%;
+  padding: 1.25rem 0;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #FFF;
+}
+.works-wrap .information a.works-btn--contact {
+  color: #fff;
+  background: #eb6100;
+}
+.works-wrap .information a.works-btn--tel {
+  color: #fff;
+  background: #094;
+}
+.works-wrap .spacer {
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 960px) {
+  .works-wrap .header, .works-wrap .hamburger, .works-wrap .globalMenuSp {
+    display: none;
+  }
+  .works-wrap .main {
+    display: flex;
+  }
+  .works-wrap .section-menu {
+    display: inherit;
+    position: sticky;
+    top: 0;
+    width: 30%;
+    height: 100vh;
+    margin-right: 0;
+  }
+  .works-wrap .works-container {
+    max-width: 960px;
+    margin: 20px 70px;
+  }
+  .works-wrap .introduction .detail {
+    padding: 60px 80px;
+  }
+  .works-wrap .introduction .detail dl {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .works-wrap .introduction .detail dt {
+    width: 30%;
+    margin-bottom: 30px;
+    border-bottom: solid 1px #2C1F46;
+  }
+  .works-wrap .introduction .detail dd {
+    width: 70%;
+    margin-bottom: 30px;
+  }
+  .works-wrap .introduction .secondary {
+    height: 800px;
+  }
+  .works-wrap .information {
+    margin-bottom: 128px;
+  }
+  .works-wrap .spacer {
+    margin-top: 96px;
+  }
+}
+/*===============================
+    下層-works一覧
+================================*/
+.works-wrap {
+  /*選択されているタブのコンテンツのみを表示*/
+  /*選択されているタブのスタイルを変える*/
+}
+.works-wrap .container h2 {
+  margin-left: 70px;
+  padding: 40px 0;
+  font-size: 2.4rem;
+  color: #FFF;
+  text-align: center;
+}
+.works-wrap .tabs {
+  margin: 0 20px 20px 70px;
+  padding-bottom: 40px;
+  background-color: #fff;
+}
+.works-wrap .tab_item {
+  display: inline-block;
+  width: 32%;
+  height: 50px;
+  border-bottom: 3px solid #ddd;
+  background-color: #FFF;
+  font-size: 1.3rem;
+  text-align: center;
+  line-height: 50px;
+  color: #2C1F46;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.works-wrap .tab_item:hover {
+  opacity: 0.5;
+}
+.works-wrap input[name=tab_item] {
+  display: none;
+}
+.works-wrap .tab_content {
+  display: none;
+  padding: 40px 40px 0;
+  overflow: hidden;
+  text-align: center;
+}
+.works-wrap #webdesign:checked ~ #webdesign_content,
+.works-wrap #coding:checked ~ #programming_content,
+.works-wrap #banner:checked ~ #banner_content,
+.works-wrap #LINE:checked ~ #LINE_content,
+.works-wrap #graphic:checked ~ #graphic_content {
+  display: block;
+}
+.works-wrap .tabs input:checked + .tab_item {
+  background-color: #2C1F46;
+  color: #fff;
+  border-bottom: 3px solid #2C1F46;
+}
+
+@media screen and (min-width: 960px) {
+  .works-wrap .container h2 {
+    margin-left: 0;
+  }
+  .works-wrap .tabs {
+    margin: 0 20px;
+  }
+  .works-wrap .tab_item {
+    width: 19%;
+  }
+}/*# sourceMappingURL=works.css.map */
