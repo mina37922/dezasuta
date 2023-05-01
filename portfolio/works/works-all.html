@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STRAtoLINE（ポートフォリオサイト）</title>
-    <meta name="description" content="Web制作、LINE、グラフィックデザイン〜〜〜">
+    <meta name="description" content="作って終わりではなく、作ってはじまる。お客様の課題を解決するための制作に取り組んでおります。Web制作、LINE、グラフィックデザイン">
 
-    <link rel="stylesheet" href="css/works.css">
+    <script src="https://kit.fontawesome.com/2058aff795.js" crossorigin="anonymous"></script>
     <script>
         (function(d) {
             var config = {
@@ -18,6 +18,8 @@
             h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
         })(document);
     </script>
+
+    <link rel="stylesheet" href="../css/works-style.css">
     
 </head>
 
@@ -34,90 +36,97 @@
         <nav class="globalMenuSp">
             <ul>
                 <li><a href="../index.html">STAR to LINE</a></li>
-                <li><a href="#">実績一覧</a></li>
-                <li><a href="#">#Webデザイン</a></li>
-                <li><a href="#">#コーディング</a></li>
-                <li><a href="#">#バナー</a></li>
-                <li><a href="#">#LINE</a></li>
-                <li><a href="#">#グラフィック</a></li>
-                <li><a href="#">ホームに戻る</a></li>
+                <li><a href="works-all.html?active-tab=tab-1">#Webデザイン</a></li>
+                <li><a href="works-all.html?active-tab=tab-2">#コーディング</a></li>
+                <li><a href="works-all.html?active-tab=tab-3">#バナー</a></li>
+                <li><a href="works-all.html?active-tab=tab-4">#LINE</a></li>
+                <li><a href="works-all.html?active-tab=tab-5">#グラフィック</a></li>
+                <li><a href="../index.html">ホームに戻る</a></li>
             </ul>
         </nav>
         
     </header>
 
     <main class="main">
+        
 
         <div class="section-menu">
             <div class="section-box">
-                <h2 class="title" data-number="02">WORKS</h2>
+                <h2 class="title font-color" data-number="02">WORKS</h2>
                     
                 <h3 class="sub-title">制作実績</h3>
-                    <ul>
-                        <li><a href="#">実績一覧</a></li>
-                        <li><a href="#">#Webデザイン</a></li>
-                        <li><a href="#">#コーディング</a></li>
-                        <li><a href="#">#バナー</a></li>
-                        <li><a href="#">#LINE</a></li>
-                        <li><a href="#">#グラフィック</a></li>
-                    </ul>
+                <ul>
+                    <li><a href="works-all.html?active-tab=tab-1">#Webデザイン</a><i class="angle-right fa-light fa-angle-right"></i></li>
+                    <li><a href="works-all.html?active-tab=tab-2">#コーディング</a><i class="angle-right fa-light fa-angle-right"></i></li>
+                    <li><a href="works-all.html?active-tab=tab-3">#バナー</a><i class="angle-right fa-light fa-angle-right"></i></li>
+                    <li><a href="works-all.html?active-tab=tab-4">#LINE</a><i class="angle-right fa-light fa-angle-right"></i></li>
+                    <li><a href="works-all.html?active-tab=tab-5">#グラフィック</a><i class="angle-right fa-light fa-angle-right"></i></li>
+                    <li><a href="../index.html">ホームに戻る</a><i class="angle-right fa-light fa-angle-right"></i></li>
+                </ul>
             </div>
-            <div class="arrow bg-color pc-only">
-                <a href="#">お問い合わせ</a>
-            </div>
+            <a href="../index.html#contact" class="arrow arrow-left bg-color pc-only">
+                お問い合わせ
+            </a>
+
         </div><!-- /section-menu -->
 
         <div class="container">
         
             <h2>実績一覧</h2>
 
-            <div class="tabs">
-
-                <input id="webdesign" type="radio" name="tab_item" checked>
-                <label class="tab_item" for="webdesign">#Webデザイン</label>
-                
-                <input id="coding" type="radio" name="tab_item">
-                <label class="tab_item" for="coding">#コーディング</label>
-                
-                <input id="banner" type="radio" name="tab_item">
-                <label class="tab_item" for="banner">#バナー</label>
-                
-                <input id="LINE" type="radio" name="tab_item">
-                <label class="tab_item" for="LINE">#LINE</label>
-                
-                <input id="graphic" type="radio" name="tab_item">
-                <label class="tab_item" for="graphic">#グラフィック</label>
-
-                <div class="tab_content" id="webdesign_content">
+                <div class="inner">
                     
-                    <img src="img/works.png" alt="">
-                    <img src="img/works.png" alt="">
-                    <img src="img/works.png" alt="">
+                    <div class="tabs">
+                        <div class="tabs-menu">
+                            <div class="tabs-menu-item js-tab-switch" data-tab="tab-1">#Webデザイン</div>
+                            <div class="tabs-menu-item js-tab-switch" data-tab="tab-2">#コーディング</div>
+                            <div class="tabs-menu-item js-tab-switch" data-tab="tab-3">#バナー</div>
+                            <div class="tabs-menu-item js-tab-switch" data-tab="tab-4">#LINE</div>
+                            <div class="tabs-menu-item js-tab-switch" data-tab="tab-5">#グラフィック</div>
+                        </div>
+                        <div class="tabs-contain">
+                            <div class="tabs-body js-tab-cts" data-tab="tab-1">
+                                <a href="works-web01.html"><img src="img/works-web01-top.png" alt="ネイルサロンのWebデザイン"></a>
+                                <a href="works-web03.html"><img src="img/works-web03-top.png" alt="ネイルサロンのWebデザイン"></a>
+                            
+                            </div>
+                            <div class="tabs-body js-tab-cts" data-tab="tab-2">
+                                <a href="works-web01.html"><img src="img/works-web01-top.png" alt="ネイルサロンのコーディング"></a>
+                                <a href="works-web02.html"><img src="img/works-web02-top.png" alt="カフェのコーディング"></a>
+                                <a href="works-web03.html"><img src="img/works-web03-top.png" alt="ネイルサロンのコーディング"></a>
+                            
+                            </div>
+                            <div class="tabs-body js-tab-cts" data-tab="tab-3">
+                                
+                            
+                            </div>
+                            <div class="tabs-body js-tab-cts" data-tab="tab-4">
+                                <a href="works-LINE01.html"><img src="img/works-LINE01-top.png" alt="コンサル会社のリッチメニュー"></a>
+                            
+                            </div>
+                            <div class="tabs-body js-tab-cts" data-tab="tab-5">
+                                <a href="works-graphic01.html"><img src="img/works-graphic01-top.png" alt="ネイルサロンのチラシ"></a>
+                                <a href="works-graphic02.html"><img src="img/works-graphic02-top.png" alt="ネイルサロンの名刺"></a>
+                                
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="tab_content" id="coding_content">
-                    <img src="img/works.png" alt="">
-                    <img src="img/works.png" alt="">
+
+            <div class="information spacer">
+                <div class="btn-wrap btn-wrap">
+                    <a href="works-all.html?active-tab=tab-1" class="btn works-btn">
+                        実績一覧
+                    </a>
+                    <a href="../index.html" class="btn works-btn">
+                        ホームへ戻る
+                    </a>
                 </div>
-
-                <div class="tab_content" id="banner_content">
-                    <img src="img/works.png" alt="">
-                    <img src="img/works.png" alt="">
-                </div>
-
-            <div class="tab_content" id="LINE_content">
-                <img src="img/works.png" alt="">
-                <img src="img/works.png" alt="">
-            </div>
-
-            <div class="tab_content" id="graphic_content">
-                <img src="img/works.png" alt="">
-                <img src="img/works.png" alt="">
-            </div>
-
-            </div><!-- /tabs -->
+            </div><!-- /information -->
 
         </div>
+
 
     </main><!-- /main -->
 
@@ -127,7 +136,7 @@
 
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-        <script src="js/script.js"></script>
+        <script src="../js/script.js"></script>
 
 
 </body>

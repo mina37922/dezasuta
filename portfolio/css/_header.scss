@@ -1,0 +1,140 @@
+@charset "utf-8";
+/*===============================
+	header
+================================*/
+.header {
+    position: fixed;
+    width: 50px;
+    height: 100vh;
+    background-color: #FFF;
+    z-index: 999;
+
+    .pc-nav {
+        display: none;
+    }
+}
+
+/*　spナビゲーション　*/
+.globalMenuPc {
+    display: none;
+}
+.hamburger {
+	display : flex;
+    justify-content: center;
+    align-items: center;
+	position: fixed;
+	width: 50px;
+	height: 100vh;
+	color: #2C1F46;
+	background-color: #FFF;
+	text-align: center;
+	writing-mode: vertical-rl;
+	letter-spacing: .5em;
+	z-index : 3;
+
+    .menu {
+        display: flex;
+        justify-content: center;
+    }
+    p {
+        color: #2C1F46;
+    }
+}
+
+/* スマホメニューを開いてる時のボタン */
+.hamburger.active  {
+	right: 30px;
+}
+
+/* メニュー背景　*/
+nav.globalMenuSp {
+	position: fixed;
+	z-index : 2;
+	top  : 0;
+	left : 0;
+	color: #2C1F46;
+	background: #FFF;
+	width: 100%;
+	height: 100vh;
+	padding-left: 20px;
+	transform: translateX(-100%);
+	transition: all 0.6s;
+
+    ul {
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+
+        li {
+            width: 100%;
+            transition: .4s all;
+        }
+        a {
+            color: #2C1F46;
+        }
+    }
+}
+
+nav.globalMenuSp ul li a {
+	display: block;
+	padding: 20px 50px 20px 20px;
+	text-decoration :none;
+}
+nav.globalMenuSp li .menu {
+	position: relative;
+	font-size: 4rem;
+
+    &::before {
+        position: absolute;
+        bottom: 6px;
+        font-size: 1.5rem;
+    }
+}
+
+nav.globalMenuSp li .menu1::before {
+	content: 'サービス';
+}
+nav.globalMenuSp li .menu2::before {
+	content: '制作実績';
+}
+nav.globalMenuSp li .menu3::before {
+	content: '自己紹介';
+}
+nav.globalMenuSp li .menu4::before {
+	content: 'お問い合わせ';
+}
+
+/* クリックでjQueryで追加・削除 */
+nav.globalMenuSp.active {
+	opacity: 100;
+	display: block;
+	transform: translateX(0%);
+}
+
+
+@media screen and (min-width:600px){
+    .header {
+        width: 80px;
+    }
+
+        .hamburger, .globalMenuSp {
+            display: none;
+        }
+
+        .globalMenuPc {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            p, li {
+                color: #2C1F46;
+                writing-mode: vertical-rl;
+            }
+            p {
+                padding: 60px 0 80px;
+            }
+            li {
+                padding: 20px 0;
+            }
+        }
+}
